@@ -66,6 +66,23 @@ nav {
     justify-content: center;
 }
 
+.loader {
+    width: 100vw;
+    height: calc(100vh - 60px);
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 9999;
+    background-color: rgb(255, 255, 255);
+}
+
+.loader>div {
+    position: fixed;
+    top: calc(50% + 60px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 main {
     width: 100%;
     height: calc(90% - 5px);
@@ -76,6 +93,10 @@ main {
 blog-link {
     color: blue;
     cursor: pointer;
+}
+
+.sidenav {
+    z-index: 10001;
 }
 
 .sidenav li,
