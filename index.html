@@ -113,7 +113,8 @@
     $(window).on('load', () => {
         $('.blog').click((blog) => {
             if ($(blog.currentTarget).attr('href') != null && $(blog.currentTarget).attr('href').trim() != '') {
-                window.open($(blog.currentTarget).attr('href'), '_blank');
+                sessionStorage.setItem('home', 'true');
+                window.location.href = ($(blog.currentTarget).attr('href'));
             }
         });
     });

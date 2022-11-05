@@ -3,11 +3,14 @@ $(document).ready(() => {
     // livejs.setAttribute('src', 'https://livejs.com/live.js');
     // document.head.appendChild(livejs);
     // delete livejs;
-
-    $('header').load('/common/header.html');
 });
 
 $(window).on('load', () => {
+    $('header').load('/common/header.html', () => {
+        $('.sidenav').sidenav();
+        $('.materialboxed').materialbox();
+    });
+
     $('.header-search>input')
         .on('focus', () => {
             $('.header-search').css('box-shadow', '-4px 4px 7px black');
@@ -20,8 +23,4 @@ $(window).on('load', () => {
     $('blog-link').click((link) => {
         window.open(link.currentTarget.innerText, '_blank');
     });
-
-
-    $('.sidenav').sidenav();
-    $('.materialboxed').materialbox();
 });
