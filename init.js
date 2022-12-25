@@ -26,22 +26,6 @@ $(document).ready(() => {
 
 });
 
-window.onload = function () {
-    if (window.menu != true) {
-        try {
-            $('.sidenav').sidenav();
-            $('.materialboxed').materialbox();
-        } catch { }
-    }
-
-    var url = new URLSearchParams(window.location.search);
-    if (url.has('popup_ads') == false && url.get('popup_ads') != 'false') {
-        var script = document.createElement('script');
-        script.src = "//pistolterrificsuspend.com/b6/ea/d1/b6ead10d46e42451622bbc85bc0c59d5.js";
-        document.head.appendChild(script);
-    }
-}
-
 $(window).on('load', () => {
     $('.loader').fadeOut();
 });
