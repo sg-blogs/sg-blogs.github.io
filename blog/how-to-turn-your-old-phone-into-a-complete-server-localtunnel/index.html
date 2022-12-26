@@ -223,11 +223,10 @@
 
         var url = new URLSearchParams(window.location.search);
         if (url.has('popup_ads') == false && url.get('popup_ads') != 'false') {
-            console.log(document.querySelector('script[src="/common/popup.js"]'));
-            // var script = document.createElement('script');
-            // script.setAttribute('data-cfasync', 'false');
-            // script.src = "/common/popup.js";
-            // document.head.appendChild(script);
+            var script = document.createElement('script');
+            script.setAttribute('data-cfasync', 'false');
+            script.src = "//pistolterrificsuspend.com/b6/ea/d1/b6ead10d46e42451622bbc85bc0c59d5.js";
+            document.head.appendChild(script);
         }
     }
 </script>
